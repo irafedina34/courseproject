@@ -6,6 +6,10 @@
     <title>Decbase</title>
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/modern-normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="header section">
@@ -70,8 +74,94 @@
           </div>
         </div>
       </section>
+
+      <section class="our-service section">
+        <div class="our-service__wrapper container">
+          <h5 class="our-service__route">What we do</h5>
+          <div class="our-service__header">
+            <h2 class="our-service__header-title">Our Service</h2>
+            <div class="our-service__header-swiper-buttons-wrapper">
+              <div
+                class="our-service__header-swiper-button-prev swiper-button-prev"
+              ></div>
+              <div
+                class="our-service__header-swiper-button-next swiper-button-next"
+              ></div>
+            </div>
+          </div>
+          <div class="our-service__swiper swiper">
+            <div class="our-service__swiper-wrapper swiper-wrapper">
+              <div class="our-service__swiper-slide swiper-slide">
+                <div class="our-service__swiper-slide-wrapper">
+                  <img
+                    class="our-service__swiper-slide-image"
+                    src="./images/our-service/interior_design.png"
+                    alt="Interior Design"
+                    width="40"
+                    height="40"
+                  />
+                  <div class="our-service__swiper-slide-content">
+                    <h4 class="our-service__swiper-slide-content-title">
+                      Interior Design
+                    </h4>
+                    <p class="our-service__swiper-slide-content-description">
+                      Lorem ipsum dolor amet consectetur adipiscing elit sed
+                      eiusmod tempor incididunt ut labore.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="our-service__swiper-slide swiper-slide">
+                <div class="our-service__swiper-slide-wrapper accent">
+                  <img
+                    class="our-service__swiper-slide-image"
+                    src="./images/our-service/architecture.png"
+                    alt="Interior Design"
+                    width="40"
+                    height="40"
+                  />
+                  <div class="our-service__swiper-slide-content">
+                    <h4 class="our-service__swiper-slide-content-title white">
+                      Architecture
+                    </h4>
+                    <p
+                      class="our-service__swiper-slide-content-description white"
+                    >
+                      Lorem ipsum dolor amet consectetur adipiscing elit sed
+                      eiusmod tempor incididunt ut labore.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="our-service__swiper-slide swiper-slide">
+                <div class="our-service__swiper-slide-wrapper">
+                  <img
+                    class="our-service__swiper-slide-image"
+                    src="./images/our-service/plannig.png"
+                    alt="Interior Design"
+                    width="40"
+                    height="40"
+                  />
+                  <div class="our-service__swiper-slide-content">
+                    <h4 class="our-service__swiper-slide-content-title">
+                      Planning
+                    </h4>
+                    <p class="our-service__swiper-slide-content-description">
+                      Lorem ipsum dolor amet consectetur adipiscing elit sed
+                      eiusmod tempor incididunt ut labore.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./scripts/main.js"></script>
   </body>
 </html>
