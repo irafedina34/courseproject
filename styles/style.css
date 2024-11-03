@@ -3,18 +3,21 @@
   --black: #212121;
   --black-dark: #111111;
   --gray: #646464;
-  --white: #FFFFFF;
-  --white-light: #F8F8F8;
-  --accent-light: #CAA892;
-  --accent-dark: #37806B;
-  --icon-background: #D5D5D5;
-  --input-background: #EEEEEE;
+  --white: #ffffff;
+  --white-light: #f8f8f8;
+  --accent-light: #caa892;
+  --accent-light-hover: #D5BAA8;
+  --accent-dark: #37806b;
+  --accent-dark-hover: #3E9179;
+  --icon-background: #d5d5d5;
+  --input-background: #eeeeee;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: clamp(14px, 1.25vw, 18px);
 }
 
 ul {
@@ -82,4 +85,88 @@ p {
   font-weight: 400;
   font-style: normal;
   color: var(--gray);
+}
+
+.section {
+  padding-block: 80px;
+}
+
+.container {
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+.header {
+  padding-top: 37px;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .header__wrapper {
+    flex-direction: column;
+  }
+}
+.header__list {
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  margin-left: auto;
+  margin-right: 64px;
+}
+@media (max-width: 1023px) {
+  .header__list {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .header__list {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+    align-items: center;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    row-gap: 20px;
+  }
+}
+.header__item {
+  transition: color 200ms ease-in-out;
+}
+@media (hover: hover) {
+  .header__item:hover {
+    color: var(--accent-dark);
+  }
+}
+@media (hover: none) {
+  .header__item:active {
+    color: var(--accent-dark);
+  }
+}
+.header__link {
+  font-weight: 500;
+}
+.header__button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  background-color: var(--accent-light);
+  color: var(--white);
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding-inline: 19px;
+  padding-block: 5px;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+}
+@media (hover: hover) {
+  .header__button:hover {
+    background-color: var(--accent-light-hover);
+  }
+}
+@media (hover: none) {
+  .header__button:active {
+    background-color: var(--accent-light-hover);
+  }
 }/*# sourceMappingURL=style.css.map */
