@@ -1,16 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&family=Poppins:wght@500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&family=Poppins:wght@500;600&display=swap");
 
 :root {
     --black: #212121;
     --black-dark: #111111;
     --gray: #646464;
-    --white: #FFFFFF;
-    --white-light: #F8F8F8;
-    --accent-light: #CAA892;
-    --accent-dark: #37806B;
-    --icon-background: #D5D5D5;
-    --input-background: #EEEEEE;
+    --white: #ffffff;
+    --white-light: #f8f8f8;
+    --accent-light: #caa892;
+    --accent-light-hover: #D5BAA8;
+    --accent-dark: #37806b;
+    --accent-dark-hover: #3E9179;
+    --icon-background: #d5d5d5;
+    --input-background: #eeeeee;
 }
+
+$transition-duration: 200ms;
+$transition-function: ease-in-out;
 
 @mixin fluid-text($max, $min) {
     font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
@@ -22,13 +27,13 @@
     border: none;
 }
 
-@mixin poppins ($weight: 500) {
+@mixin poppins($weight: 500) {
     font-family: "Poppins", serif;
     font-weight: $weight;
     font-style: normal;
 }
 
-@mixin open-sans ($weight: 400) {
+@mixin open-sans($weight: 400) {
     font-family: "Open Sans", sans-serif;
     font-weight: $weight;
     font-style: normal;
@@ -68,6 +73,7 @@
 
 body {
     @include open-sans;
+    @include fluid-text(18, 14);
 }
 
 ul {
@@ -124,4 +130,76 @@ p {
     @include fluid-text(18, 14);
     @include open-sans(400);
     color: var(--gray);
+}
+
+.section {
+    padding-block: 80px;
+}
+
+.container {
+    max-width: 1280px;
+    margin-inline: auto;
+}
+
+.header {
+    padding-top: 37px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    &__list {
+        display: flex;
+        column-gap: 30px;
+        margin-left: auto;
+        margin-right: 64px;
+
+        @include tablet {
+            margin-right: 30px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            margin-left: 0;
+            margin-right: 0;
+            align-items: center;
+            column-gap: 0;
+            row-gap: 20px;
+        }
+    }
+
+    &__item {
+        transition: color $transition-duration $transition-function;
+        @include hover {
+            color: var(--accent-dark);
+        }
+    }
+
+    &__link {
+        font-weight: 500;
+    }
+
+    &__button {
+        @include reset-button;
+
+        background-color: var(--accent-light);
+        color: var(--white);
+        border-top-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding-inline: 19px;
+        padding-block: 5px;
+        transition:
+            color $transition-duration $transition-function,
+            background-color $transition-duration $transition-function;
+
+        @include hover {
+            background-color: var(--accent-light-hover);
+        }
+    }
 }
