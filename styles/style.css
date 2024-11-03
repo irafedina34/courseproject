@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&family=Poppins:wght@500;600&display=swap");
+:root {
+  --black: #212121;
+  --black-dark: #111111;
+  --gray: #646464;
+  --white: #FFFFFF;
+  --white-light: #F8F8F8;
+  --accent-light: #CAA892;
+  --accent-dark: #37806B;
+  --icon-background: #D5D5D5;
+  --input-background: #EEEEEE;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: clamp(36px, 5vw, 72px);
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--black);
+}
+
+h2 {
+  font-size: clamp(24px, 3.3333333333vw, 48px);
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--black);
+}
+
+h3 {
+  font-size: clamp(22px, 2.0833333333vw, 30px);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--black);
+}
+
+h4 {
+  font-size: clamp(20px, 1.6666666667vw, 24px);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--black);
+}
+h4.white {
+  color: var(--white-light);
+}
+
+h5 {
+  font-size: clamp(16px, 1.3888888889vw, 20px);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--gray);
+}
+
+p {
+  font-size: clamp(14px, 1.25vw, 18px);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--gray);
+}/*# sourceMappingURL=style.css.map */
