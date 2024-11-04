@@ -726,4 +726,102 @@ p.white {
     font-size: 14px;
     text-align: center;
   }
+}
+
+.letest-news {
+  background-color: var(--white-dark);
+}
+.letest-news__route, .letest-news__title {
+  text-align: center;
+}
+.letest-news__title {
+  margin-bottom: 50px;
+}
+.letest-news__list {
+  display: flex;
+  -moz-column-gap: 100px;
+       column-gap: 100px;
+}
+@media (max-width: 1023px) {
+  .letest-news__list {
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .letest-news__list {
+    flex-direction: column;
+  }
+}
+.letest-news__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .letest-news__item {
+    align-items: center;
+  }
+}
+.letest-news__item-image {
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .letest-news__item-image {
+    height: 100%;
+  }
+}
+.letest-news__item-image-wrapper {
+  margin-bottom: 60px;
+}
+.letest-news__item-image-wrapper.image--border-bottom-right::after {
+  border-bottom-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  z-index: 0;
+}
+.letest-news__item-title {
+  margin-bottom: 17px;
+}
+.letest-news__item-description {
+  margin-bottom: 45px;
+}
+@media (max-width: 768px) {
+  .letest-news__item-title, .letest-news__item-description {
+    text-align: center;
+  }
+}
+.letest-news__item-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  background-color: var(--accent-dark);
+  color: var(--white);
+  padding-inline: 35px;
+  padding-block: 13.5px;
+  text-transform: uppercase;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: background-color 200ms ease-in-out;
+  font-weight: 600;
+  align-self: flex-start;
+}
+@media (hover: hover) {
+  .letest-news__item-button:hover {
+    background-color: var(--accent-dark-hover);
+  }
+}
+@media (hover: none) {
+  .letest-news__item-button:active {
+    background-color: var(--accent-dark-hover);
+  }
+}
+@media (max-width: 768px) {
+  .letest-news__item-button {
+    align-self: center;
+    margin-bottom: 50px;
+  }
 }/*# sourceMappingURL=style.css.map */
