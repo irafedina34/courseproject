@@ -557,9 +557,6 @@ p {
 .statistic {
     background-color: var(--white-dark);
 
-    &__wrapper {
-    }
-
     &__title {
         text-align: center;
         margin-bottom: 87px;
@@ -847,6 +844,80 @@ p {
                 align-self: center;
                 margin-bottom: 50px;
             }
+        }
+    }
+}
+
+.sign-up {
+
+    &__title {
+        text-align: center;
+        margin-bottom: 37px;
+    }
+
+    &__horizontal-line {
+        max-width: 460px;
+        margin-inline: auto;
+        margin-bottom: 40px;
+    }
+
+    &__description {
+        max-width: 647px;
+        text-align: center;
+        margin-inline: auto;
+        margin-bottom: 29px;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__label {
+        display: none;
+    }
+
+    &__input {
+        max-width: 592px;
+        flex-grow: 1;
+        outline: none;
+        border: none;
+        border-top-left-radius: 20px;
+        background-color: var(--input-background);
+        padding-left: 27px;
+        padding-right: 10px;
+        transition-duration: $transition-duration;
+        transition-timing-function: $transition-function;
+        border: 1px solid transparent;
+
+        &:focus {
+            border-color: var(--accent-dark);
+        }
+
+        @include hover {
+            border-color: var(--accent-dark);
+        }
+    }
+
+    &__submit-button {
+        @include reset-button;
+
+        background-color: var(--accent-dark);
+        color: var(--white);
+        padding-inline: 42px;
+        padding-block: 13.5px;
+        text-transform: uppercase;
+        border-bottom-right-radius: 20px;
+        transition: background-color $transition-duration $transition-function;
+        font-weight: 600;
+        align-self: flex-start;
+
+        @include hover {
+            background-color: var(--accent-dark-hover);
+        }
+
+        @include mobile {
+            padding-inline: 24px;
         }
     }
 }
