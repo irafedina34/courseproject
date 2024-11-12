@@ -1,5 +1,6 @@
 const our_service_swiper = new Swiper(".our-service__swiper", {
   slidesPerView: 1,
+  spaceBetween: 37,
   loop: true,
 
   breakpoints: {
@@ -7,7 +8,7 @@ const our_service_swiper = new Swiper(".our-service__swiper", {
       slidesPerView: 2,
     },
 
-    1024: {
+    1280: {
       slidesPerView: 3,
     },
   },

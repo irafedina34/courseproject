@@ -53,7 +53,7 @@ $transition-function: ease-in-out;
 }
 
 @mixin mobile {
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         @content;
     }
 }
@@ -147,9 +147,9 @@ p {
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 1920px;
     margin-inline: auto;
-    padding-inline: 120px;
+    padding-inline: 12.5%;
 
     @include tablet {
         padding-inline: 60px;
@@ -404,13 +404,14 @@ p {
     }
 
     &__swiper {
+        padding: 10px 20px 25px 20px !important;
+
         &-slide-wrapper {
             display: flex;
             column-gap: 20px;
             box-shadow: 0px 8px 20px 0px #00000024;
             border-top-left-radius: 60px;
             border-bottom-right-radius: 60px;
-            margin: 30px;
             padding: 40px 20px 40px 40px;
 
             @include mobile {
@@ -568,6 +569,7 @@ p {
 
     &__list {
         display: flex;
+        justify-content: center;
         @include mobile {
             flex-direction: column;
             row-gap: 50px;
@@ -945,11 +947,11 @@ p {
         @include tablet {
             flex-wrap: wrap;
             justify-content: center;
+            row-gap: 37px;
         }
     }
 
     &__logo {
-
         @include mobile {
             margin-bottom: 30px;
         }
@@ -1036,7 +1038,7 @@ p {
 
     &__mark {
         padding-top: 15px;
-        border-top: 1px solid #C4C4C4;
+        border-top: 1px solid #c4c4c4;
 
         &-text {
             text-align: center;
