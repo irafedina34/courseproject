@@ -695,7 +695,7 @@ p {
                 box-shadow: 7px 7px 30px 5px #42605426;
                 border-top-left-radius: 70px;
                 border-bottom-right-radius: 70px;
-                margin: 20px 10px 40px 10px;
+                margin: 20px 40px 40px 10px;
                 padding: 20px 40px 60px 100px;
 
                 @include mobile {
@@ -995,6 +995,12 @@ p {
             @include open-sans(400);
             @include fluid-text(18, 16);
             color: var(--gray);
+            transition-duration: $transition-duration;
+            transition-timing-function: $transition-function;
+
+            @include hover {
+                color: var(--accent-dark);
+            }
         }
     }
 

@@ -4,7 +4,11 @@ const our_service_swiper = new Swiper(".our-service__swiper", {
 
   breakpoints: {
     768: {
-        slidesPerView: 2,
+      slidesPerView: 2,
+    },
+
+    1024: {
+      slidesPerView: 3,
     },
   },
 
@@ -18,8 +22,15 @@ const testimonials_swiper = new Swiper(".testimonials__swiper", {
   slidesPerView: 1,
   spaceBetween: 64,
   loop: true,
-  navigation: {                 
-    nextEl: '.testimonials__swiper-button-next',
-    prevEl: '.testimonials__swiper-button-prev',
+
+  breakpoints: {
+    1440: {
+      slidesPerView: 2,
+    },
+  },
+
+  navigation: {
+    nextEl: ".testimonials__swiper-button-next",
+    prevEl: ".testimonials__swiper-button-prev",
   },
 });
