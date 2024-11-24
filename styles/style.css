@@ -122,6 +122,26 @@ p.white {
   }
 }
 
+@media (min-width: 768px) {
+  .visible-mobile {
+    display: none !important;
+  }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  -webkit-clip-path: inset(100%) !important;
+          clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
 .image--border-top-left {
   position: relative;
 }
@@ -161,9 +181,9 @@ p.white {
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .header__wrapper {
-    flex-direction: column;
+    padding-inline: 30px;
   }
 }
 @media (max-width: 1023px) {
@@ -236,6 +256,13 @@ p.white {
   .header__button:active {
     background-color: var(--accent-light-hover);
   }
+}
+.header__menu {
+  background-color: transparent;
+  border: none;
+}
+.header__menu-icon {
+  color: var(--black-dark);
 }
 
 .hero__wrapper {
@@ -1037,4 +1064,65 @@ p.white {
 }
 .footer__mark-text {
   text-align: center;
+}
+
+.mobile-overlay {
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin: 0;
+  background-color: var(--white-dark);
+}
+.mobile-overlay:modal {
+  max-width: 100%;
+  max-height: 100%;
+}
+.mobile-overlay__form {
+  display: flex;
+  justify-content: end;
+}
+.mobile-overlay__button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  background-color: var(--accent-light);
+  color: var(--white);
+  font-weight: 600;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding-inline: 19px;
+  padding-block: 5px;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+}
+@media (hover: hover) {
+  .mobile-overlay__button:hover {
+    background-color: var(--accent-light-hover);
+  }
+}
+@media (hover: none) {
+  .mobile-overlay__button:active {
+    background-color: var(--accent-light-hover);
+  }
+}
+.mobile-overlay__button-close {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.mobile-overlay__icon-close {
+  color: var(--black);
+}
+.mobile-overlay__body {
+  height: 90%;
+}
+.mobile-overlay__list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.mobile-overlay__link {
+  font-size: 26px;
+  color: var(--black);
 }/*# sourceMappingURL=style.css.map */

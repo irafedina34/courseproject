@@ -1,3 +1,9 @@
+const dialog = document.getElementById("mobileOverlay");
+
+function closeMobileOverlay() {
+  dialog.close();
+}
+
 const our_service_swiper = new Swiper(".our-service__swiper", {
   slidesPerView: 1,
   spaceBetween: 37,

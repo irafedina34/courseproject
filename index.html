@@ -23,7 +23,7 @@
             height="47"
           />
         </a>
-        <ul class="header__list">
+        <ul class="header__list hidden-mobile">
           <li class="header__item">
             <a class="header__link" href="./index.html">Home</a>
           </li>
@@ -46,7 +46,24 @@
             <a class="header__link" href="#footer">Contact</a>
           </li>
         </ul>
-        <button class="header__button" type="button">Sign up</button>
+        <button
+          type="button"
+          class="header__menu visible-mobile"
+          onclick="mobileOverlay.showModal()"
+        >
+          <svg
+            class="header__menu-icon"
+            width="32"
+            height="32"
+            fill="currentColor"
+          >
+            <use href="./images/svg/icons.svg#icon-menu" />
+          </svg>
+          <span class="visually-hidden">Open navigator menu</span>
+        </button>
+        <button class="header__button hidden-mobile" type="button">
+          Sign up
+        </button>
       </div>
     </header>
 
@@ -565,7 +582,9 @@
           <h4 class="footer__quick-links-title">Quick Links</h4>
           <ul class="footer__quick-links-list">
             <li class="footer__quick-links-item">
-              <a class="footer__quick-links-link" href="#about">About Our Company</a>
+              <a class="footer__quick-links-link" href="#about"
+                >About Our Company</a
+              >
             </li>
             <li class="footer__quick-links-item">
               <a class="footer__quick-links-link" href="#services"
@@ -592,7 +611,9 @@
               <a class="footer__company-link" href="#about">About Company</a>
             </li>
             <li class="footer__company-item">
-              <a class="footer__company-link" href="#testimonials">Our Testimonials</a>
+              <a class="footer__company-link" href="#testimonials"
+                >Our Testimonials</a
+              >
             </li>
             <li class="footer__company-item">
               <a class="footer__company-link" href="#blog">Latest News</a>
@@ -617,12 +638,16 @@
               <a class="footer__contact-us-link" href="#">Street Front USA</a>
             </li>
             <li class="footer__contact-us-item">
-              <a class="footer__contact-us-link" href="mailto:brandoxide@gmail.com"
+              <a
+                class="footer__contact-us-link"
+                href="mailto:brandoxide@gmail.com"
                 >brandoxide@gmail.com</a
               >
             </li>
             <li class="footer__contact-us-item">
-              <a class="footer__contact-us-link" href="tel:002-568423591">002-568423591</a>
+              <a class="footer__contact-us-link" href="tel:002-568423591"
+                >002-568423591</a
+              >
             </li>
           </ul>
         </div>
@@ -682,6 +707,87 @@
         </p>
       </div>
     </footer>
+
+    <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+      <form class="mobile-overlay__form" method="dialog">
+        <button class="mobile-overlay__button-close" type="submit">
+          <svg
+            class="mobile-overlay__icon-close"
+            width="48"
+            height="48"
+            fill="currentColor"
+          >
+            <use href="./images/svg/icons.svg#icon-close" />
+          </svg>
+          <span class="visually-hidden">Close navigation menu</span>
+        </button>
+      </form>
+      <div class="mobile-overlay__body">
+        <ul class="mobile-overlay__list">
+          <li class="mobile-overlay__item">
+            <a
+              class="mobile-overlay__link"
+              href="./index.html"
+              onclick="closeMobileOverlay()"
+              >Home</a
+            >
+          </li>
+          <li class="mobile-overlay__item">
+            <a
+              class="mobile-overlay__link"
+              href="#"
+              onclick="closeMobileOverlay()"
+              >Project</a
+            >
+          </li>
+          <li class="mobile-overlay__item">
+            <a
+              class="mobile-overlay__link"
+              href="#services"
+              onclick="closeMobileOverlay()"
+              >Service</a
+            >
+          </li>
+          <li class="mobile-overlay__item">
+            <a
+              class="mobile-overlay__link"
+              href="#about"
+              onclick="closeMobileOverlay()"
+              >About</a
+            >
+          </li>
+          <li class="mobile-overlay__item">
+            <a
+              class="mobile-overlay__link"
+              href="#blog"
+              onclick="closeMobileOverlay()"
+              >Blog</a
+            >
+          </li>
+          <li class="mobile-overlay__item">
+            <a
+              class="mobile-overlay__link"
+              href="#"
+              onclick="closeMobileOverlay()"
+              >Shop</a
+            >
+          </li>
+          <li class="mobile-overlay__item">
+            <a
+              class="mobile-overlay__link"
+              href="#footer"
+              onclick="closeMobileOverlay()"
+              >Contact</a
+            >
+          </li>
+          <li class="mobile-overlay__item">
+            <button class="mobile-overlay__button" type="button">
+              Sign up
+            </button>
+          </li>
+        </ul>
+      </div>
+    </dialog>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./scripts/main.js"></script>

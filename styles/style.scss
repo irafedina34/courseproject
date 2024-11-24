@@ -58,6 +58,12 @@ $transition-function: ease-in-out;
     }
 }
 
+@mixin mobile-above {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
 @mixin hover {
     @media (hover: hover) {
         &:hover {
@@ -166,6 +172,25 @@ p {
     }
 }
 
+.visible-mobile {
+    @include mobile-above {
+        display: none !important;
+    }
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
+
 .image {
     &--border-top-left {
         position: relative;
@@ -207,8 +232,8 @@ p {
         justify-content: space-between;
         align-items: center;
 
-        @include mobile {
-            flex-direction: column;
+        @include tablet {
+            padding-inline: 30px;
         }
     }
 
@@ -269,6 +294,15 @@ p {
 
         @include hover {
             background-color: var(--accent-light-hover);
+        }
+    }
+
+    &__menu {
+        background-color: transparent;
+        border: none;
+
+        &-icon {
+            color: var(--black-dark);
         }
     }
 }
@@ -1043,5 +1077,69 @@ p {
         &-text {
             text-align: center;
         }
+    }
+}
+
+.mobile-overlay {
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: 0;
+    background-color: var(--white-dark);
+
+    &:modal {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: end;
+    }
+
+    &__button {
+        @include reset-button;
+
+        background-color: var(--accent-light);
+        color: var(--white);
+        font-weight: 600;
+        border-top-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding-inline: 19px;
+        padding-block: 5px;
+        transition:
+            color $transition-duration $transition-function,
+            background-color $transition-duration $transition-function;
+
+        @include hover {
+            background-color: var(--accent-light-hover);
+        }
+    }
+
+    &__button-close {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
+
+    &__icon-close {
+        color: var(--black);
+    }
+
+    &__body {
+        height: 90%;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+    }
+
+    &__link {
+        font-size: 26px;
+        color: var(--black);
     }
 }
